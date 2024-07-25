@@ -99,7 +99,7 @@ iframe {
 
 .card::before {
     filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
+    -webkit-filter: blur(1rem);
     opacity: 0.5;
 }
 
@@ -208,7 +208,7 @@ iframe {
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-filter: blur(5px);
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     animation: glowing 20s linear infinite;
@@ -294,15 +294,9 @@ iframe {
 
 .center-card::before {
     filter: blur(1.5rem) !important;
-    -webkit-backdrop-filter: blur(1.5rem)!important;
+    -webkit-filter: blur(1.5rem)!important;
     opacity: 0.5;
 }
-
-/*
-.center-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0px 15px #7CC7FE;
-}*/
 
 .more-info {
     border: 1px solid #FFFFFF;
@@ -332,7 +326,7 @@ iframe {
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-filter: blur(5px);
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     animation: glowing 20s linear infinite;
