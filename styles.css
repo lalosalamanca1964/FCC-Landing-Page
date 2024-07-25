@@ -212,8 +212,10 @@ iframe {
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     animation: glowing 20s linear infinite;
+    -webkit-animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
     border-radius: 10px;
 
     background-image: -webkit-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
@@ -290,6 +292,7 @@ iframe {
     padding: 3px;
     border-radius: 27px;
     animation: 10s spin linear infinite !important;
+    -webkit-animation: 10s spin linear infinite !important;
 }
 
 .center-card::before {
@@ -330,8 +333,10 @@ iframe {
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     animation: glowing 20s linear infinite;
+    -webkit-animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
     border-radius: 10px;
 
     background-image: -webkit-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
@@ -378,6 +383,7 @@ iframe {
     }
     .frame-column {
         min-height: 1000px;
+        height: 1000px;
     }
     .spacing {
         height: 10px;
