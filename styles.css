@@ -1,7 +1,24 @@
+@-webkit-keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
@@ -73,24 +90,16 @@ iframe {
     z-index: -1;
     padding: 2px;
     border-radius: 25px;
+
+    background-image: -webkit-conic-gradient(#568BBD, #7CC7FE, #FFFFFF, #568BBD);
+    background-image: -moz-conic-gradient(#568BBD, #7CC7FE, #FFFFFF, #568BBD);
+    background-image: -o-conic-gradient(#568BBD, #7CC7FE, #FFFFFF, #568BBD);
+    background-image: -ms-conic-gradient(#568BBD, #7CC7FE, #FFFFFF, #568BBD);
 }
 
 .card::before {
     filter: blur(1rem);
     opacity: 0.5;
-}
-
-/*.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0px 15px #7CC7FE;
-}*/
-
-.ellipse {
-    position: relative;
-    border: 2px solid #6A89A7;
-    height: 150px;
-    width: 80px;
-    border-radius: 50%;
 }
 
 .title-frame {
@@ -106,7 +115,7 @@ iframe {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 50px;
-    font-family: "Plus Jakarta Sans";
+    font-family: "Plus Jakarta Sans", Impact, sans-serif;
     font-weight: 800;
     margin-top: -50px;
 }
@@ -204,6 +213,11 @@ iframe {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
+
+    background-image: -webkit-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -moz-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -o-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -ms-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
 }
 
 .geo-link-frame:active {
@@ -321,6 +335,11 @@ iframe {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
+
+    background-image: -webkit-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -moz-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -o-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    background-image: -ms-linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
 }
 
 .more-info:active {
