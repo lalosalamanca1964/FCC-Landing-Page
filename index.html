@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Farragut Christian Church</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="frame-column" id="one">
+            <div class="spacing"></div>
+            <div class="card">
+                
+            </div>
+            <div class="card">
+                
+            </div>
+            <div class="card">
+                
+            </div>
+        </div>
+        <div class="frame-column" id="two">
+            <div class="title-frame">
+            <h1 class="FCC-Title">
+                Farragut
+            </h1>
+            <h1 class="FCC-Title" style="margin-left: 10px;">
+                Christian
+            </h1>
+            <h1 class="FCC-Title" style="margin-left: 30px;">
+                Church
+            </h1>
+            </div>
+            <div class="slogan-div">
+                <p class="slogan-text">LOVE GOD</p>
+                <div class="line"></div>
+                <p class="slogan-text">LOVE PEOPLE</p>
+                <div class="line"></div>
+                <p class="slogan-text">SAVE ALL</p>
+            </div>
+            <div class="worship-info-div">
+                <p class="worship-info-text">Sunday Worship: 10:30 am</p>
+                <p class="worship-info-text">Sunday School: 9:15 am</p>
+            </div>
+
+            <div class="worship-info-line"></div>
+
+            <div class="address-div">
+                <p class="address-text">138 ADMIRAL ROAD</p>
+                <p class="address-text">KNOXVILLE TN 37934</p>
+            </div>
+
+            <a>
+            <div class="geo-link-frame">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="17px" height="17px"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                <p class="geo-link-text">Join Us for Worship</p>
+            </div>
+            </a>
+
+            <div class="center-card">
+                <div style="
+                    width: 90%; 
+                    height: 80%; 
+                    border-radius: 15px; 
+                    background-color: #6B7280; 
+                    display: flex; 
+                    flex-flow: row;
+                    align-items: center; 
+                    justify-content: center;
+                    margin-top: 10px;">
+                <iframe width="97%" height="98%"
+                    src="https://www.youtube.com/embed/CdQ8LAX4E9c">
+                </iframe>
+                </div>
+                <div style="
+                    text-align: start;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 85%;
+                    height: 10%;
+                    border-radius: 10px;
+                    border-left: 4px solid #6B7280;
+                    margin-top: 5px;
+                    padding: 10px 0px 0px 5px;">
+                    <p class="worship-info-text" style="font-size: 15px; width: 90%; font-weight: 400;">
+                        A message from Lead Minister, Jason Warden
+                    </p>
+                </div>
+            </div>
+
+            <div class="more-info">
+                <p class="geo-link-text">Learn More</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="20px" style="margin-top: 2px;"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </div>
+        </div>
+
+        <div class="frame-column" id="three">
+            <div class="spacing"></div>
+            <div class="card">
+
+            </div>
+            <div class="card">
+                
+            </div>
+            <div class="card">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const one = document.getElementById('one').innerHTML;
+        const two = document.getElementById('two').innerHTML;
+        const three = document.getElementById('three').innerHTML;
+        const frame1 = '<div class="frame-column" id="one">' + one + '</div>' + 
+                        '<div class="frame-column" id="two">' + two + '</div>' + 
+                        '<div class="frame-column" id="three">' + three + '</div>';
+        const frame2 = two + one + three; 
+
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            console.log('Current screen width:', screenWidth);
+            if (screenWidth < 1000) {
+                document.querySelector('.frame').innerHTML = frame2;
+            } else {
+            document.querySelector('.frame').innerHTML = frame1;
+            }
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+    </script>
+</body>
+</html>
