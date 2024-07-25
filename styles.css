@@ -378,6 +378,7 @@ iframe {
     }
     .frame-column {
         min-height: 1000px;
+        height: 1000px;
     }
     .spacing {
         height: 10px;
