@@ -1,0 +1,368 @@
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+html {
+    background-color: #18181B;
+    scroll-behavior: smooth;
+}
+
+svg {
+    padding-left: 7px;
+}
+
+iframe {
+    border-radius: 15px;
+    border: none;
+}
+
+.frame {
+    display: grid;
+    grid-template-columns: 300px 400px 300px;
+    min-width: 750px;
+    max-width: 1000px;
+    min-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame-column {
+    border: 1px dotted none;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 1000px;
+}
+
+.spacing {
+    width: 100%;
+    height: 275px;
+}
+
+.card {
+    border: 2px solid none;
+    border-radius: 25px;
+    background: #18181B;
+    width: 175px;
+    height: 200px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.card::after, .card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(#568BBD, #7CC7FE, #FFFFFF, #568BBD);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 25px;
+}
+
+.card::before {
+    filter: blur(1rem);
+    opacity: 0.5;
+}
+
+/*.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 15px #7CC7FE;
+}*/
+
+.ellipse {
+    position: relative;
+    border: 2px solid #6A89A7;
+    height: 150px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.title-frame {
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+}
+
+.FCC-Title {
+    background: #568BBD;
+    background: linear-gradient(to bottom right, #568BBD 0%, #7CC7FE 52%, #FFFFFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    margin-top: -50px;
+}
+
+.slogan-div {
+    border: 1px solid none;
+    width: 250px;
+    height: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -25px;
+}
+
+.slogan-text {
+    font-family: "Work Sans";
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.line {
+    border-bottom: 1px solid #6B7280;
+    width: 10px;
+}
+
+.worship-info-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.worship-info-text {
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.worship-info-line {
+    border-bottom: 1px solid #FFFFFF; 
+    width: 200px;
+    margin-top: 5px;
+}
+
+.address-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.address-text {
+    font-family: "Work Sans";
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    margin-top: -10px;
+}
+
+.geo-link-frame {
+    border: 1px solid #FFFFFF;
+    outline: none;
+    color: #FFFFFF;
+    background-color: #18181B;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px 7px 3px 2px;
+    margin-top: 10px;
+}
+
+.geo-link-frame:before {
+    content: '';
+    background: linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.geo-link-frame:active {
+    color: #18181B;
+}
+
+.geo-link-frame:active:after {
+    background: transparent;
+}
+
+.geo-link-frame:hover:before {
+    opacity: 1;
+}
+
+.geo-link-frame:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #18181B;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.geo-link-frame:hover {
+    border: none;
+}
+
+.geo-link-text {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.center-card {
+    border: 2px solid none;
+    border-radius: 25px;
+    background-color: #18181B;
+    width: 225px;
+    height: 400px;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.center-card::after, .center-card::before {
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 25%, #7CC7FE, transparent);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 27px;
+    animation: 10s spin linear infinite;
+}
+
+.center-card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+/*
+.center-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 15px #7CC7FE;
+}*/
+
+.more-info {
+    border: 1px solid #FFFFFF;
+    outline: none;
+    color: #FFFFFF;
+    background-color: #18181B;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    padding: 2px;
+}
+
+.more-info::before {
+    content: '';
+    background: linear-gradient(45deg, #6B7280, #568BBD, #7CC7FE, #FFFFFF, #00ffd5, #002bff, #7a00ff, #ff00c8, #6B7280);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.more-info:active {
+    color: #18181B;
+}
+
+.more-info:active:after {
+    background: transparent;
+}
+
+.more-info:hover:before {
+    opacity: 1;
+}
+
+.more-info:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #18181B;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.more-info:hover {
+    border: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .frame {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 2400px;
+        min-width: 250px;
+    }
+    .frame-column {
+        min-height: 1000px;
+    }
+    .spacing {
+        height: 10px;
+    }
+}
