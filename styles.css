@@ -297,7 +297,7 @@ iframe {
 
 .center-card::before {
     filter: blur(1.5rem) !important;
-    -webkit-filter: blur(1.5rem)!important;
+    -webkit-backdrop-filter: blur(1.5rem)!important;
     opacity: 0.5;
 }
 
