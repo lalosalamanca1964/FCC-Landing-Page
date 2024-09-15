@@ -1,3 +1,7 @@
+@use postcss-preset-env {
+    stage: 0;
+}
+
 @-webkit-keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -77,6 +81,37 @@ iframe {
     margin-top: 25px;
     position: relative;
 }
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #18181B;
+    line-height: 35px;
+    border-radius: 25px;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    background: #18181B;
+    color: white;
+    transform: rotateY( 180deg );
+  }
 
 .card::after, .card::before {
     content: '';
@@ -263,8 +298,8 @@ iframe {
     border: 2px solid none;
     border-radius: 25px;
     background-color: #18181B;
-    width: 225px;
-    height: 400px;
+    width: 375px;
+    height: 300px;
     margin-top: 50px;
     display: flex;
     flex-flow: column;
@@ -374,6 +409,29 @@ iframe {
     border: none;
 }
 
+.card-title {
+    font-family: "Playwrite Deutschland Grundschrift", Poppins, sans-serif;
+    background-clip: text;
+    background-image: linear-gradient(to right, #FFFFFF, #7CC7FE, #cdcdcd, #FFFFFF);
+    color: #18181B;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 15px;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 6);
+    text-align: center;
+}
+
+.pfp-frame {
+    border: 3px solid #FFFFFF;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px 0 0 5px;
+}
+
 @media screen and (max-width: 1000px) {
     .frame {
         display: flex;
@@ -390,3 +448,5 @@ iframe {
         height: 10px;
     }
 }
+
+
