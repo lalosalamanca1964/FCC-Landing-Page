@@ -218,6 +218,7 @@ a {
     font-size: 15px;
     color: #FFFFFF;
     margin-top: -10px;
+    text-decoration: none;
 }
 
 .geo-link-frame {
@@ -296,6 +297,7 @@ a {
     font-family: "Plus Jakarta Sans";
     font-weight: 700;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .center-card {
