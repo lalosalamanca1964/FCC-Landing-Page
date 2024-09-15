@@ -48,6 +48,10 @@ iframe {
     border: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .frame {
     display: grid;
     grid-template-columns: 300px 400px 300px;
@@ -69,7 +73,7 @@ iframe {
 
 .spacing {
     width: 100%;
-    height: 275px;
+    height: 350px;
 }
 
 .card {
@@ -448,5 +452,3 @@ iframe {
         height: 10px;
     }
 }
-
-
