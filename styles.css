@@ -95,11 +95,6 @@ a {
     transform-style: preserve-3d;
   }
   
-  .card:hover .content {
-    transform: rotateY( 180deg ) ;
-    transition: transform 0.5s;
-  }
-  
   .front,
   .back {
     position: absolute;
@@ -418,7 +413,7 @@ a {
 .card-title {
     font-family: "Playwrite Deutschland Grundschrift", Poppins, sans-serif;
     background-clip: text;
-    background-image: linear-gradient(to right, #FFFFFF, #7CC7FE, #cdcdcd, #FFFFFF);
+    background-image: linear-gradient(to right, #FFFFFF, #cdcdcd, #FFFFFF);
     color: #18181B;
     font-size: 27px;
     font-weight: 600;
@@ -430,7 +425,7 @@ a {
 }
 
 .pfp-frame {
-    border: 3px solid #FFFFFF;
+    border: 3px solid #cdcdcd;
     width: 70px;
     height: 70px;
     border-radius: 50%;
